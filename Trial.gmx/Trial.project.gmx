@@ -5,9 +5,23 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\spr_playerplaceholder</sprite>
+    <sprite>sprites\spr_magetest</sprite>
+    <sprite>sprites\spr_wallPlaceholder</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\set_depth.gml</script>
+  </scripts>
+  <objects name="objects">
+    <object>objects\obj_playerParent</object>
+    <object>objects\obj_wall</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\room0</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
