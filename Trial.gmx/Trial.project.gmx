@@ -10,6 +10,7 @@
     <sprite>sprites\spr_magetest</sprite>
     <sprite>sprites\spr_wallPlaceholder</sprite>
     <sprite>sprites\spr_githubtest</sprite>
+    <sprite>sprites\spr_githubtest1</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
