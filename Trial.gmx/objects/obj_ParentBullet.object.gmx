@@ -31,7 +31,7 @@
 //
 //  Date:       09/24/16
 //
-//  Object Action:     obj_TestBullet.obj_tbSetUp
+//  Object Action:     obj_ParentBullet.obj_tbSetUp
 //
 //  Writen by:  Evan Wilcher
 //
@@ -41,15 +41,15 @@
 //===========================================================================
 
 //  Initialize movement variables
-_hspd   = 0;
-_vspd   = 0;
-_accel  = 0.02;
+hspd   = 0;
+vspd   = 0;
+accel  = 0.02;
 
 //  Image settings
 image_speed = 0;
 speed       = 5;
 //  I need to do some damage!!!
-_damage = 10;
+damage = 10;
 </string>
           </argument>
         </arguments>
@@ -83,49 +83,22 @@ _damage = 10;
 //  What this script aims to do is:
 //  1) Move a bullet.
 //===========================================================================
+
+//collision checking
+
+if place_meeting(x+hspeed, y, obj_wall) {
+    instance_destroy();
+}
+if place_meeting(x, y+vspeed, obj_wall) {
+   instance_destroy();
+}
+if place_meeting(x+hspeed, y+vspeed, obj_wall) { // This one checks to ensure that you don't intersect with corners
+    instance_destroy();
+}
+
+
 x += hspeed;
 y += vspeed;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_wall">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Collision with wall
-//===========================================================================
-//  Project:    Trial
-//
-//  Date:       09/25/2016
-//
-//  Writen by:  Evan Wilcher
-// 
-//  What this script aims to do is:
-//  1) Check collision with the wall
-//  
-//===========================================================================
-
-if !collision_ellipse(bbox_left, bbox_bottom, 
-                        bbox_right, bbox_top, 
-                        obj_wall, false, false)
-{
-    instance_destroy();                    
-}
 </string>
           </argument>
         </arguments>

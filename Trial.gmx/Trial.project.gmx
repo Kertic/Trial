@@ -12,7 +12,6 @@
     <sprite>sprites\spr_githubtest</sprite>
     <sprite>sprites\spr_githubtest1</sprite>
     <sprite>sprites\spr_TestBullet</sprite>
-    <sprite>sprites\sprite6</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -21,9 +20,11 @@
     <script>scripts\int_Bullet.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_playerParent</object>
+    <objects name="ParentPlayer">
+      <object>objects\obj_playerParent</object>
+      <object>objects\obj_ParentBullet</object>
+    </objects>
     <object>objects\obj_wall</object>
-    <object>objects\obj_TestBullet</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

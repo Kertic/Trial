@@ -20,10 +20,10 @@
 //===========================================================================
 
 // let's set some variables
-var _bulletID;      // My bullet!
-var _Steps  = 0;    // How fast my bullet is!
-var _Len    = 0;    // How long my bullet has to go!
-var _Angle  = 0;    // The direction my bullet is going!
+var Bullet_ID;      // My bullet!
+var steps  = 0;    // How fast my bullet is!
+var len    = 0;    // How long my bullet has to go!
+var angle  = 0;    // The direction my bullet is going!
 
 //========================================================
 // THIS IS THE OLD WAY WITH KEYBOARD!  IT LONG AND UGLY!
@@ -40,32 +40,32 @@ if _vUp
 {
     // Check to see if we have ammo if we are using ammo
     // if(argument0.checkammo)
-    _bulletID = instance_create(x,y, argument0);
-    _bulletID._vspd -= 5;
+    Bullet_ID = instance_create(x,y, argument0);
+    Bullet_ID._vspd -= 5;
 }
 
 else if _vDown
 {
     // Check to see if we have ammo if we are using ammo
     // if(argument0.checkammo)
-    _bulletID = instance_create(x,y, argument0);
-    _bulletID._vspd += 5;
+    Bullet_ID = instance_create(x,y, argument0);
+    Bullet_ID._vspd += 5;
 }
 
 else if _vLeft
 {
     // Check to see if we have ammo if we are using ammo
     // if(argument0.checkammo)
-    _bulletID = instance_create(x,y, argument0);
-    _bulletID._hspd -= 5;
+    Bullet_ID = instance_create(x,y, argument0);
+    Bullet_ID._hspd -= 5;
 }
 
 else if _vRight
 {
     // Check to see if we have ammo if we are using ammo
     // if(argument0.checkammo)
-    _bulletID = instance_create(x,y, argument0);
-    _bulletID._hspd += 5;
+    Bullet_ID = instance_create(x,y, argument0);
+    Bullet_ID._hspd += 5;
 }*/
 
 // Check for that sweet mouse input!  
@@ -73,17 +73,17 @@ else if _vRight
 //          there will be weapon degradation.
 if (mouse_check_button(mb_left))
 {
-_Len = point_distance(x, y, 
+len = point_distance(x, y, 
                       mouse_x, mouse_y);    //FAR I'M SHOOTING TEX!?
-_Angle = point_direction(x, y, 
+angle = point_direction(x, y, 
                          mouse_x, mouse_y); //WERE I'M SHOOTING TEX!?
  
-_bulletID = instance_create(x, y, 
-                            argument0);     //GETTING MY BULLET READY!
+Bullet_ID = instance_create(x, y, 
+                            obj_ParentBullet);     //GETTING MY BULLET READY!
 
-_Steps = _Len/_bulletID.speed;// CHANGE speed variable OF BULLET TO 
+steps = len/Bullet_ID.speed;// CHANGE speed variable OF BULLET TO 
                               // MAKE IT GO FASTER OR SLOWER
 
-_bulletID.hspeed = lengthdir_x(_Len, _Angle)/_Steps; // LEFT-RIGHT GO!
-_bulletID.vspeed = lengthdir_y(_Len, _Angle)/_Steps; // UP-DOWN GO!
+Bullet_ID.hspeed = lengthdir_x(len, angle)/steps; // LEFT-RIGHT GO!
+Bullet_ID.vspeed = lengthdir_y(len, angle)/steps; // UP-DOWN GO!
 }

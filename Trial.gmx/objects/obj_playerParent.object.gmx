@@ -38,13 +38,13 @@ haccel = 2;
 image_speed = 0;
 
 // EDIT: Delay (_tb_Delay), bool _CanShoot, and ammo (_bAmmo).  
-//              _tbDelay is a delay a player has before theycan shoot again
+//              reloadSpeed is a delay a player has before theycan shoot again
 //              _bAmmo is for how many shots can be fired.  _bAmmois commented
 //               out for design purposes.
 //              
 // By: Evan Wilcher
 
-_tbDelay  = 5;
+reloadSpeed  = 1;
 _CanShoot = true;
 // _bAmmo = 100;
 
@@ -54,30 +54,6 @@ _CanShoot = true;
       </action>
     </event>
     <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>_CanShoot</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>true</string>
-          </argument>
-        </arguments>
-      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -94,7 +70,7 @@ _CanShoot = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Above Action
+            <string>/// Set _CanShoot to True
 //===========================================================================
 //  Project: Trial
 //
@@ -107,6 +83,8 @@ _CanShoot = true;
 //  What does it do?
 //      _CanShoot = true;
 //===========================================================================
+
+_CanShoot = true;
 </string>
           </argument>
         </arguments>
@@ -275,88 +253,6 @@ if downkey {//moving down
       </action>
       <action>
         <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>_CanShoot</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>true</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>601</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>9</kind>
-            <script>int_Bullet</script>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>obj_TestBullet</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -371,122 +267,12 @@ if downkey {//moving down
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Execute Script: int_Bullet comments
-//===========================================================================
-//  Project:    Trial
-//
-//  Date:       09/25/2016
-//
-//  Object Action:     Execute Script: int_Bullet
-//
-//  Writen by:  Evan Wilcher
-//
-//  This action aims to:
-//  1) Create a bullet and fire it towards the mouse if possible.
-//
-//  Variables
-//  argument0 = obj_TestBullet
-//===========================================================================
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>_tbDelay</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>_CanShoot</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>false</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Above If Statement
-//===========================================================================
-//  Project: Trial
-//
-//  Date:   9/25/2016
-//
-//  Block of Code made by GM Studio actions
-//
-//  Created by:  Evan Wilcher
-//
-//  What does it do?
-//      if (_CanShoot == true)
-//      {
-//           Execture_Script: int_Bullet; //and tell me what it is about;
-//           Set_Alarm0 = _tbDelay;
-//           _CanShoot = false
-//      }
-//===========================================================================
+            <string>///Attacking test
+if _CanShoot = true {
+    script_execute(int_Bullet);
+    alarm[0] = reloadSpeed;
+    _CanShoot = false;
+}
 </string>
           </argument>
         </arguments>
