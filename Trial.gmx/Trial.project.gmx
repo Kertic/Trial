@@ -12,6 +12,9 @@
     <sprite>sprites\spr_githubtest</sprite>
     <sprite>sprites\spr_githubtest1</sprite>
     <sprite>sprites\spr_TestBullet</sprite>
+    <sprites name="Start menu">
+      <sprite>sprites\spr_menuStart</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -25,9 +28,15 @@
       <object>objects\obj_ParentBullet</object>
     </objects>
     <object>objects\obj_wall</object>
+    <objects name="Menu">
+      <objects name="TitleScreen">
+        <object>objects\obj_startButton</object>
+      </objects>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\rm_title</room>
+    <room>rooms\rm_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
