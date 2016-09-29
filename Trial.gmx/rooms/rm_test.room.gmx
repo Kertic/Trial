@@ -10,7 +10,21 @@
   <persistent>0</persistent>
   <colour>16711680</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>if global.playerSelect == 0 {
+    instance_create (480, 160, obj_Mage)
+}
+
+if global.playerSelect == 1 {
+    instance_create (480, 160, obj_Warrior)
+}
+
+if global.playerSelect == 2 {
+    instance_create (480, 160, obj_Assassin)
+}
+
+if global.playerSelect == 3 {
+    instance_create (480, 160, obj_Hunter)
+}</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

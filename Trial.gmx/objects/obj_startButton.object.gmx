@@ -51,14 +51,14 @@
             <string>///Start button click detection
 
 //If the mouse aligns with the object and its pressed down
-if ((mouse_x  &gt;= obj_startButton.x &amp;&amp; mouse_x  &lt;= obj_startButton.x+500) &amp;&amp; (mouse_y &gt;= obj_startButton.y &amp;&amp; mouse_y &lt;= obj_startButton.y+100) &amp;&amp; (mouse_check_button_pressed(mb_left) == true)){
+if ((mouse_x  &gt;= obj_startButton.x &amp;&amp; mouse_x  &lt;= obj_startButton.x+192) &amp;&amp; (mouse_y &gt;= obj_startButton.y &amp;&amp; mouse_y &lt;= obj_startButton.y+48) &amp;&amp; (mouse_check_button_pressed(mb_left) == true)){
     image_index = 1;//Display the "pressed frame"
 };
 
 //if the mouse aligns with the object, and its released, and the image is displaying pressed
-if ((mouse_x  &gt;= obj_startButton.x &amp;&amp; mouse_x  &lt;= obj_startButton.x+500) &amp;&amp; (mouse_y &gt;= obj_startButton.y &amp;&amp; mouse_y &lt;= obj_startButton.y+100) &amp;&amp; (mouse_check_button_released(mb_left) == true)){
+if ((mouse_x  &gt;= obj_startButton.x &amp;&amp; mouse_x  &lt;= obj_startButton.x+192) &amp;&amp; (mouse_y &gt;= obj_startButton.y &amp;&amp; mouse_y &lt;= obj_startButton.y+48) &amp;&amp; (mouse_check_button_released(mb_left) == true)){
     if (image_index == 1){//If the image index is 1(AKA, displaying the pressed frame)
-    room_goto(rm_test);// Go to the character select screen
+    room_goto(rm_CharSelect);// Go to the character select screen
     };
 };
 
