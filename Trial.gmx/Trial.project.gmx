@@ -10,7 +10,12 @@
       <sprites name="Start menu">
         <sprite>sprites\spr_menuStart</sprite>
       </sprites>
-      <sprites name="Selection"/>
+      <sprites name="Selection">
+        <sprite>sprites\spr_MageSelect</sprite>
+        <sprite>sprites\spr_WarriorSelect</sprite>
+        <sprite>sprites\spr_AssassinSelect</sprite>
+        <sprite>sprites\spr_HunterSelect</sprite>
+      </sprites>
     </sprites>
     <sprites name="Characters">
       <sprite>sprites\spr_playerplaceholder</sprite>
@@ -38,13 +43,24 @@
       <objects name="TitleScreen">
         <object>objects\obj_startButton</object>
       </objects>
-      <objects name="Selection"/>
+      <objects name="Selection">
+        <object>objects\obj_MageSelect</object>
+        <object>objects\obj_WarriorSelect</object>
+        <object>objects\obj_AssassinSelect</object>
+        <object>objects\obj_HunterSelect</object>
+      </objects>
     </objects>
-    <objects name="Players"/>
+    <objects name="Players">
+      <object>objects\obj_Mage</object>
+      <object>objects\obj_Warrior</object>
+      <object>objects\obj_Assassin</object>
+      <object>objects\obj_Hunter</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_title</room>
     <room>rooms\rm_test</room>
+    <room>rooms\rm_CharSelect</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
