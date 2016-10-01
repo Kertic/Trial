@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// Do parent events
 
-event_inherited();
+event_inherited();//this is a test
 </string>
           </argument>
         </arguments>
