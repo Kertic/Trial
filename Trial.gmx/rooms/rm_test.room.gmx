@@ -11,20 +11,34 @@
   <colour>16711680</colour>
   <showcolour>-1</showcolour>
   <code>if global.playerSelect == 0 {
-    instance_create (480, 160, obj_Mage)
+    instance_create (544, 256, obj_Mage)
 }
 
 if global.playerSelect == 1 {
-    instance_create (480, 160, obj_Warrior)
+    instance_create (544, 256, obj_Warrior)
 }
 
 if global.playerSelect == 2 {
-    instance_create (480, 160, obj_Assassin)
+    instance_create (544, 256, obj_Assassin)
 }
 
 if global.playerSelect == 3 {
-    instance_create (480, 160, obj_Hunter)
-}</code>
+    instance_create (544, 256, obj_Hunter)
+}
+
+// EDIT:   
+// Created enemies while assgining them an enemy type.
+// Allowed enemy specific code to run depending on the enemy type.             
+// By: Brodyrick Ramsey
+global.enemy_patroller = instance_create(128, 64, obj_parentEnemies);
+global.enemy_patroller.type = enemytypes.PATROLLER;
+global.enemy_stalker    = instance_create(320, 416, obj_parentEnemies);
+global.enemy_stalker.type = enemytypes.STALKER;
+global.enemy_chaser     = instance_create(128, 224, obj_parentEnemies);
+global.enemy_chaser.type = enemytypes.CHASER;
+script_execute(int_Enemy,global.enemy_patroller,2);
+script_execute(int_Enemy,global.enemy_stalker,2);
+script_execute(int_Enemy,global.enemy_chaser,2);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -65,7 +79,6 @@ if global.playerSelect == 3 {
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_playerParent" x="512" y="352" name="inst_43662755" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="128" y="224" name="inst_16F41C34" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="160" y="224" name="inst_465EFF92" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="192" y="224" name="inst_1A81E6EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -88,6 +101,8 @@ if global.playerSelect == 3 {
     <instance objName="obj_wall" x="512" y="480" name="inst_0585B64A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="544" y="480" name="inst_E5A679C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="576" y="480" name="inst_7BCD915A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemyMarker" x="128" y="96" name="inst_F111E810" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemyMarker" x="352" y="96" name="inst_FBBE9322" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

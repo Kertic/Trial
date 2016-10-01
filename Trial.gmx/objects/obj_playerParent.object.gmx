@@ -44,7 +44,7 @@ image_speed = 0;
 //              
 // By: Evan Wilcher
 
-reloadSpeed  = 1;
+reloadSpeed  = (12);
 _CanShoot = true;
 // _bAmmo = 100;
 

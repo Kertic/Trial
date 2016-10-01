@@ -26,17 +26,21 @@
     </sprites>
     <sprite>sprites\spr_wallPlaceholder</sprite>
     <sprite>sprites\spr_TestBullet</sprite>
+    <sprite>sprites\sprite15</sprite>
     <sprite>sprites\spr_enemeyMarker</sprite>
     <sprite>sprites\sprite13</sprite>
     <sprites name="Enemies">
       <sprite>sprites\spr_enemySprite</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\set_depth.gml</script>
     <script>scripts\int_Bullet.gml</script>
+    <script>scripts\int_Enemy.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="ParentPlayer">
@@ -62,7 +66,7 @@
       <object>objects\obj_Hunter</object>
     </objects>
     <objects name="Enemies">
-      <object>objects\obj_Enemies</object>
+      <object>objects\obj_parentEnemies</object>
       <object>objects\obj_enemyMarker</object>
     </objects>
   </objects>
