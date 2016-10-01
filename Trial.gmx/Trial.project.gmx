@@ -26,6 +26,7 @@
     </sprites>
     <sprite>sprites\spr_wallPlaceholder</sprite>
     <sprite>sprites\spr_TestBullet</sprite>
+    <sprite>sprites\spr_enemeyMarker</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
