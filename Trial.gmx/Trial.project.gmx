@@ -56,6 +56,10 @@
       <object>objects\obj_Assassin</object>
       <object>objects\obj_Hunter</object>
     </objects>
+    <objects name="Enemies">
+      <object>objects\obj_Enemies</object>
+      <object>objects\obj_enemyMarker</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_title</room>
