@@ -52,7 +52,7 @@ sight = 0;      // How far and enemy can see.
 type = 0;
 
 // We need to check int_Bullets to make sure our enemies can fire bullets.
-
+image_speed = 0;
 
 
 
