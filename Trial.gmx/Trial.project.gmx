@@ -30,6 +30,7 @@
       <sprite>sprites\spr_enemySprite</sprite>
       <sprite>sprites\spr_enemeyMarker</sprite>
     </sprites>
+    <sprite>sprites\spr_MeleeHitbox</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -45,6 +46,7 @@
     <objects name="ParentPlayer">
       <object>objects\obj_playerParent</object>
       <object>objects\obj_ParentBullet</object>
+      <object>objects\obj_MeleeHitbox</object>
     </objects>
     <object>objects\obj_wall</object>
     <objects name="Menu">

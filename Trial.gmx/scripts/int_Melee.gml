@@ -25,5 +25,5 @@ rang  = point_distance(x, y,
 ang   = point_direction(x, y,
                           mouse_x, mouse_y);
 Melee_ID = instance_create(x, y,
-                          mouse_x, mouse_y);
-
+                          obj_MeleeHitbox);
+}
