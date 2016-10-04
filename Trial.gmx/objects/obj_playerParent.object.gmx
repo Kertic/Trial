@@ -268,7 +268,7 @@ if downkey {//moving down
           <argument>
             <kind>1</kind>
             <string>///Attacking test
-if _CanShoot = true {
+if (_CanShoot = true &amp;&amp; mouse_check_button(mb_left)) {
     script_execute(int_Bullet);
     alarm[0] = reloadSpeed;
     _CanShoot = false;
