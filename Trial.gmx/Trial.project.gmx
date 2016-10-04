@@ -39,6 +39,7 @@
     <script>scripts\set_depth.gml</script>
     <script>scripts\int_Bullet.gml</script>
     <script>scripts\int_Enemy.gml</script>
+    <script>scripts\int_Melee.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="ParentPlayer">
