@@ -41,6 +41,10 @@
     <script>scripts\int_Bullet.gml</script>
     <script>scripts\int_Enemy.gml</script>
     <script>scripts\int_Melee.gml</script>
+    <scripts name="Skills">
+      <script>scripts\int_Skills.gml</script>
+      <script>scripts\exe_Skills.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="ParentPlayer">
