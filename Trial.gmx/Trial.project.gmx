@@ -22,7 +22,9 @@
       <sprite>sprites\spr_Mage</sprite>
       <sprite>sprites\spr_Assassin</sprite>
       <sprite>sprites\spr_Warrior</sprite>
-      <sprite>sprites\spr_Hunter</sprite>
+      <sprites name="Hunter">
+        <sprite>sprites\spr_Hunter</sprite>
+      </sprites>
     </sprites>
     <sprite>sprites\spr_wallPlaceholder</sprite>
     <sprite>sprites\spr_TestBullet</sprite>
