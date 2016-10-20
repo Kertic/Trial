@@ -23,6 +23,10 @@
       <sprite>sprites\spr_Assassin</sprite>
       <sprite>sprites\spr_Warrior</sprite>
       <sprites name="Hunter">
+        <sprite>sprites\Hunter_Down</sprite>
+        <sprite>sprites\Hunter_Left</sprite>
+        <sprite>sprites\Hunter_Right</sprite>
+        <sprite>sprites\Hunter_Up</sprite>
         <sprite>sprites\spr_Hunter</sprite>
       </sprites>
     </sprites>
