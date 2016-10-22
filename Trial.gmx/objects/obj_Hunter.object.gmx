@@ -25,92 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check(ord('A'))) { //Started walking
-       //actually move
-     sprite_index = Hunter_Left; //Set the correct sprite (walking animation)
-     image_speed = 5;       //Room speed is 4 times faster than animation. (In a 60 fps game, the animation would show 15 frames per second.)
-  }
-
-  if (keyboard_check(ord('A'))) { //Stopped walking
-     sprite_index = spr_Hunter;
-     image_speed = 0;
-     }
-  if (keyboard_check(ord('D'))) { //Started walking
-      //actually move
-     sprite_index = Hunter_Right; //Set the correct sprite (walking animation)
-     image_speed = 5;       //Room speed is 4 times faster than animation. (In a 60 fps game, the animation would show 15 frames per second.)
-  }
-
-  if (keyboard_check(ord('D'))) { //Stopped walking
-     sprite_index = spr_Hunter;
-     image_speed = 0;
-     }
-
- if (keyboard_check(ord('S'))) { //Started walking
-      //actually move
-     sprite_index = Hunter_Down; //Set the correct sprite (walking animation)
-     image_speed = 5;       //Room speed is 4 times faster than animation. (In a 60 fps game, the animation would show 15 frames per second.)
-  }
-
-  if (keyboard_check(ord('S'))) { //Stopped walking
-     sprite_index = spr_Hunter;
-     image_speed = 0;
-     }
-
- if (keyboard_check(ord('W'))) { //Started walking
-      //actually move
-     sprite_index = Hunter_Up; //Set the correct sprite (walking animation)
-     image_speed = 5;       //Room speed is 4 times faster than animation. (In a 60 fps game, the animation would show 15 frames per second.)
-  }
-
-  if (keyboard_check(ord('W'))) { //Stopped walking
-     sprite_index = spr_Hunter;
-     image_speed = 0;
-     }
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>/// Do parent events
 
 event_inherited();
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string></string>
           </argument>
         </arguments>
       </action>
@@ -160,6 +78,8 @@ event_inherited();
             <string>/// Do parent events
 
 event_inherited();
+
+
 </string>
           </argument>
         </arguments>
@@ -186,6 +106,79 @@ if (_CanShoot = true &amp;&amp; mouse_check_button(mb_left)) {
     alarm[0] = reloadSpeed;
     _CanShoot = false;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Change sprites according to movement
+
+
+if (leftkey &amp;&amp; (hspd &lt; 0)) { //Started walking
+       //actually move
+     sprite_index = Hunter_Left; //Set the correct sprite (walking animation)
+     image_speed = 1/6;       //Room speed is 4 times faster than animation. (In a 60 fps game, the animation would show 15 frames per second.)
+     facing = 3;  //These directions align with the spr_playerplaceholder directions. 0 is north, 1 is east, 2 is sounth, and 3 is west.
+  }
+
+  if (!leftkey &amp;&amp; ((hspd == 0) &amp;&amp; (vspd == 0))) { //Stopped walking
+     sprite_index = spr_Hunter;
+     image_speed = 0;
+     image_index = facing;
+     }
+  if (rightkey &amp;&amp; (hspd &gt; 0)) { //Started walking
+      //actually move
+     sprite_index = Hunter_Right; //Set the correct sprite (walking animation)
+     image_speed = 1/6;       //Room speed is 4 times faster than animation. (In a 60 fps game, the animation would show 15 frames per second.)
+     facing = 1; 
+  }
+
+  if (!rightkey &amp;&amp; (hspd == 0) &amp;&amp; (vspd == 0)) { //Stopped walking
+     sprite_index = spr_Hunter;
+     image_speed = 0;
+     image_index = facing;
+     }
+
+ if (downkey &amp;&amp; (vspd &gt; 0)) { //Started walking
+      //actually move
+     sprite_index = Hunter_Down; //Set the correct sprite (walking animation)
+     image_speed = 1/6;       //Room speed is 4 times faster than animation. (In a 60 fps game, the animation would show 15 frames per second.)
+     facing = 2;  
+  }
+
+  if (!downkey &amp;&amp; (hspd == 0) &amp;&amp; (vspd == 0)) { //Stopped walking
+     sprite_index = spr_Hunter;
+     image_speed = 0;
+     image_index = facing;
+     }
+
+ if (upkey &amp;&amp; (vspd &lt; 0)) { //Started walking
+      //actually move
+     sprite_index = Hunter_Up; //Set the correct sprite (walking animation)
+     image_speed = 1/6;       //Room speed is 4 times faster than animation. (In a 60 fps game, the animation would show 15 frames per second.)
+     facing = 0;  
+  }
+
+  if (!upkey &amp;&amp; (hspd == 0) &amp;&amp; (vspd == 0)) { //Stopped walking
+     sprite_index = spr_Hunter;
+     image_speed = 0;
+     image_index = facing;
+     }
 </string>
           </argument>
         </arguments>

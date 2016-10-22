@@ -34,8 +34,10 @@ maxvspd = 8;
 vaccel = 2;
 haccel = 2;
 
+
 //Image settings
 image_speed = 0;
+facing = 0;
 
 // EDIT: Delay (_tb_Delay), bool _CanShoot, and ammo (_bAmmo).  
 //              reloadSpeed is a delay a player has before theycan shoot again
@@ -108,10 +110,12 @@ _CanShoot = true;
           <argument>
             <kind>1</kind>
             <string>///Movement
-var upkey = keyboard_check(ord('W'));
-var rightkey = keyboard_check(ord('D'));
-var downkey = keyboard_check(ord('S'));
-var leftkey = keyboard_check(ord('A'));
+//Initialize movement controls
+
+upkey = keyboard_check(ord('W'));
+rightkey = keyboard_check(ord('D'));
+downkey = keyboard_check(ord('S'));
+leftkey = keyboard_check(ord('A'));
 
 
 //set movement speed based on controls
@@ -169,42 +173,6 @@ if place_meeting(x+hspd, y+vspd, obj_wall) { // This one checks to ensure that y
 
 x += hspd;//X refers to its x position 
 y += vspd;//Y refers to its y position
-
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Image changing
-if leftkey {//moving left
-    image_index = 3;
-}
-if rightkey {//moving right
-    image_index = 1;
-}
-if upkey {// moving up 
-    image_index = 0;
-}
-if downkey {//moving down
-    image_index = 2;
-}
-
 
 
 </string>
