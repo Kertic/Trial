@@ -1,29 +1,21 @@
 //------------------------------------------------------------------------
-//  Project:   Trial
-//
-//  Date:      10/04/16
-//
-//  Script:    int_Melee
-//
-//  By:        Brodyrick Ramsey
-//
-//  Goal:      Set base code for specific characters to do melee attacks.
-//  Create hitboxes for melee to do damage to enemies.
-//  Melee will last 2 seconds then be destroyed.
+//Created by: Brodyrick Ramsey (took major inspiration and help from Evan)
 //------------------------------------------------------------------------
 
-// Setting Variables
-var Melee_ID;  // melee itself
-var rang   = 0; // how far the melee will swing
-var ang    = 0; // what direction the melee is swinging
+var Melee_ID;      
+var steps  = 0;    
+var len    = 0;    
+var angle  = 0;    
 
-//---------------------------------------------
-if (mouse_check_button(mb_right))
+
+if (mouse_check_button(mb_left))
 {
-rang  = point_distance(x, y,
-                          mouse_x, mouse_y);
-ang   = point_direction(x, y,
-                          mouse_x, mouse_y);
-Melee_ID = instance_create(x, y,
-                          obj_MeleeHitbox);
+len = point_distance(x, y, 
+                      mouse_x, mouse_y);    
+angle = point_direction(x, y, 
+                         mouse_x, mouse_y); 
+ 
+Bullet_ID = instance_create(x, y, 
+                            obj_Melee);     
+
 }

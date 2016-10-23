@@ -32,7 +32,7 @@
     </sprites>
     <sprite>sprites\spr_wallPlaceholder</sprite>
     <sprite>sprites\spr_TestBullet</sprite>
-    <sprite>sprites\spr_MeleeHitbox</sprite>
+    <sprite>sprites\spr_HitboxMelee</sprite>
     <sprites name="Enemies">
       <sprite>sprites\spr_enemySprite</sprite>
       <sprite>sprites\spr_enemeyMarker</sprite>
@@ -47,8 +47,8 @@
   <scripts name="scripts">
     <script>scripts\set_depth.gml</script>
     <script>scripts\int_Bullet.gml</script>
-    <script>scripts\int_Enemy.gml</script>
     <script>scripts\int_Melee.gml</script>
+    <script>scripts\int_Enemy.gml</script>
     <scripts name="Skills">
       <script>scripts\int_Skills.gml</script>
       <script>scripts\exe_Skills.gml</script>
@@ -58,7 +58,7 @@
     <objects name="ParentPlayer">
       <object>objects\obj_playerParent</object>
       <object>objects\obj_ParentBullet</object>
-      <object>objects\obj_MeleeHitbox</object>
+      <object>objects\obj_Melee</object>
     </objects>
     <object>objects\obj_wall</object>
     <objects name="Menu">
