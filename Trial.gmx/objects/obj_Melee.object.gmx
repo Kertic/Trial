@@ -35,7 +35,7 @@ image_speed = 0;
 speed       = 0;
 
 damage = 10;
-alarm[0] = 2;
+alarm[0] = 5;
 </string>
           </argument>
         </arguments>

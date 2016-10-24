@@ -15,7 +15,7 @@ len = point_distance(x, y,
 angle = point_direction(x, y, 
                          mouse_x, mouse_y); 
  
-Bullet_ID = instance_create(x, y, 
+Melee_ID = instance_create(x, y, 
                             obj_Melee);     
 
 }
