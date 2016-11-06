@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//creates vars
-hspd   = 0;
-vspd   = 0;
+            <string>///creates vars
+//hspd   = 0;    No longer done here, its done in the int_Melee script now
+//vspd   = 0;
 
 
 
@@ -56,10 +56,10 @@ alarm[0] = 5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//adjust angle of melee 
+            <string>///adjust angle of melee 
 //todo: needs adjusting to sprites facing direction
 
-image_angle = point_direction(x, y, mouse_x, mouse_y);
+image_angle = point_direction(x, y, mouse_x, mouse_y)-90;
 </string>
           </argument>
         </arguments>
@@ -84,6 +84,34 @@ image_angle = point_direction(x, y, mouse_x, mouse_y);
             <kind>1</kind>
             <string>//Destroy melee object
 instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Move with the player
+hspd = global.playerID.hspd;
+vspd = global.playerID.vspd;
+
+x += hspd;
+y += vspd;
 </string>
           </argument>
         </arguments>

@@ -39,6 +39,10 @@ haccel = 2;
 image_speed = 0;
 facing = 0;
 
+
+//ID for the object
+global.playerID = id
+
 // EDIT: Delay (_tb_Delay), bool _CanShoot, and ammo (_bAmmo).  
 //              reloadSpeed is a delay a player has before theycan shoot again
 //              _bAmmo is for how many shots can be fired.  _bAmmois commented

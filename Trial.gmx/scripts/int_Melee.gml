@@ -16,6 +16,7 @@ angle = point_direction(x, y,
                          mouse_x, mouse_y); 
  
 Melee_ID = instance_create(x, y, 
-                            obj_Melee);     
+                            obj_Melee);  
+                            
 
 }
