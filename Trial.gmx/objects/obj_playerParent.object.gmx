@@ -39,7 +39,11 @@ haccel = 2;
 image_speed = 0;
 facing = 0;
 
-
+//Movement controls
+upkey = keyboard_check(ord('W'));
+rightkey = keyboard_check(ord('D'));
+downkey = keyboard_check(ord('S'));
+leftkey = keyboard_check(ord('A'));
 //ID for the object
 global.playerID = id
 
