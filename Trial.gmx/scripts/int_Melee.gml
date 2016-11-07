@@ -15,7 +15,7 @@ len = point_distance(x, y,
 angle = point_direction(x, y, 
                          mouse_x, mouse_y); 
  
-Melee_ID = instance_create((16*cos((angle*pi)/180) + global.playerID.x), (16*sin((angle*pi)/180) + global.playerID.y+0), 
+Melee_ID = instance_create((16*cos((angle*pi)/180) + global.playerID.x), (-16*sin((angle*pi)/180) + global.playerID.y-16), 
                             obj_Melee);  
                             
 
