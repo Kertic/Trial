@@ -6,37 +6,8 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprites name="Menu">
-      <sprites name="Start menu">
-        <sprite>sprites\spr_menuStart</sprite>
-      </sprites>
-      <sprites name="Selection">
-        <sprite>sprites\spr_MageSelect</sprite>
-        <sprite>sprites\spr_WarriorSelect</sprite>
-        <sprite>sprites\spr_AssassinSelect</sprite>
-        <sprite>sprites\spr_HunterSelect</sprite>
-      </sprites>
-    </sprites>
-    <sprites name="Characters">
-      <sprite>sprites\spr_playerplaceholder</sprite>
-      <sprite>sprites\spr_Mage</sprite>
-      <sprite>sprites\spr_Assassin</sprite>
-      <sprite>sprites\spr_Warrior</sprite>
-      <sprites name="Hunter">
-        <sprite>sprites\Hunter_Down</sprite>
-        <sprite>sprites\Hunter_Left</sprite>
-        <sprite>sprites\Hunter_Right</sprite>
-        <sprite>sprites\Hunter_Up</sprite>
-        <sprite>sprites\spr_Hunter</sprite>
-      </sprites>
-    </sprites>
+    <sprite>sprites\spr_playerplaceholder</sprite>
     <sprite>sprites\spr_wallPlaceholder</sprite>
-    <sprite>sprites\spr_TestBullet</sprite>
-    <sprite>sprites\spr_HitboxMelee</sprite>
-    <sprites name="Enemies">
-      <sprite>sprites\spr_enemySprite</sprite>
-      <sprite>sprites\spr_enemeyMarker</sprite>
-    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -44,41 +15,10 @@
   <paths name="paths">
     <path>paths\path0</path>
   </paths>
-  <scripts name="scripts">
-    <script>scripts\set_depth.gml</script>
-    <script>scripts\int_Enemy.gml</script>
-    <scripts name="Skills">
-      <script>scripts\int_Skills.gml</script>
-      <script>scripts\exe_Skills.gml</script>
-    </scripts>
-    <script>scripts\gen_Room.gml</script>
-  </scripts>
-  <objects name="objects">
-    <objects name="ParentPlayer">
-      <object>objects\obj_playerParent</object>
-      <object>objects\obj_ParentBullet</object>
-      <object>objects\obj_Melee</object>
-    </objects>
-    <object>objects\obj_wall</object>
-    <objects name="Menu">
-      <objects name="TitleScreen">
-        <object>objects\obj_startButton</object>
-      </objects>
-      <objects name="Selection">
-        <object>objects\obj_MageSelect</object>
-        <object>objects\obj_WarriorSelect</object>
-        <object>objects\obj_AssassinSelect</object>
-        <object>objects\obj_HunterSelect</object>
-      </objects>
-    </objects>
-    <objects name="Enemies">
-      <object>objects\obj_parentEnemies</object>
-      <object>objects\obj_enemyMarker</object>
-    </objects>
-  </objects>
+  <scripts name="scripts"/>
+  <objects name="objects"/>
   <rooms name="rooms">
     <room>rooms\rm_title</room>
-    <room>rooms\rm_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
