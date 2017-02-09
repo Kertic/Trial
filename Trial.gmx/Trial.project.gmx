@@ -46,8 +46,6 @@
   </paths>
   <scripts name="scripts">
     <script>scripts\set_depth.gml</script>
-    <script>scripts\int_Bullet.gml</script>
-    <script>scripts\int_Melee.gml</script>
     <script>scripts\int_Enemy.gml</script>
     <scripts name="Skills">
       <script>scripts\int_Skills.gml</script>
@@ -73,12 +71,6 @@
         <object>objects\obj_HunterSelect</object>
       </objects>
     </objects>
-    <objects name="Players">
-      <object>objects\obj_Mage</object>
-      <object>objects\obj_Warrior</object>
-      <object>objects\obj_Assassin</object>
-      <object>objects\obj_Hunter</object>
-    </objects>
     <objects name="Enemies">
       <object>objects\obj_parentEnemies</object>
       <object>objects\obj_enemyMarker</object>
@@ -87,7 +79,6 @@
   <rooms name="rooms">
     <room>rooms\rm_title</room>
     <room>rooms\rm_test</room>
-    <room>rooms\rm_CharSelect</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
